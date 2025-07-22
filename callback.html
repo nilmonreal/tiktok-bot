@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>OAuth Callback</title></head>
+<body>
+  <h1>✅ TikTok OAuth Success!</h1>
+  <p>Copy the <strong>code</strong> parameter from the URL:</p>
+  <pre id="code">...</pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('code').textContent = params.get('code') || 'No code found';
+  </script>
+</body>
+</html>
